@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/DKDN.css">
+    <link rel="stylesheet" href="CSS/HderFter.css">
+    <title>Đăng ký</title>
+</head>
+<body>
+    <header id="header">
+        <img src="Anh/pcgaming.png" alt="" width="100px" height="130px">
+        <a href="index.php" class="logo">PC Gaming
+            <span>|</span> 
+            <br>
+            <p> PCGAMING.COM</p>
+        </a>
+
+        <!-- <div class="down">
+            <div class="seach">
+                <input type="" name="" placeholder="Tìm kiếm" >
+            </div>
+            gio hang
+            <div class="button">
+                <button><i class="fa-solid fa-magnifying-glass"></i><a href=""></a></button>
+            </div>
+        </div> -->
+
+        <ul class="navigation">
+            <li><a href="index.php">Trang chủ</a></li>
+            <li> <a href="gioithieu.php">Giới thiệu</a></li>
+            <li><a href="san_pham.php">Sản phẩm</a></li>
+            <li><a href="login.html">Đăng nhập</a></li>
+        </ul>
+        <div class="giohang">
+            <!-- sua href gio hang -->
+           <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </header>
+    
+    <br>
+    <br>
+    <br>
+
+    <h1 style="text-align: center; color:black">Đăng ký</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="form">
+        <form action="register.php" method="post" id="form1">
+            <input type="text" id="username" name="username" placeholder="Tên tài khoản muốn đăng ký" required><br>
+            <input type="password" id="password" name="password" placeholder="Vui lòng nhập mật khẩu" required><br>
+            <input type="password" id="repass" name="repass" placeholder="Nhập lại mật khẩu" required><br>
+            <input type="submit" value="Đăng ký">
+        </form>
+    </div>
+    <p style="text-align: center; font-size: 20px">Bạn đã có tài khoản?<a href="login.html">Đăng nhập tại đây</a></p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        // Hiển thị thông báo lỗi hoặc thành công
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        const success = urlParams.get('success');
+
+        if (error) {
+            alert(error);
+        }
+
+        if (success) {
+            alert(success);
+        }
+    </script>
+
+<!--------------------------------------------------------------------------------Footer-------------------------------------------------------------------------------->
+<footer class="footer" id="footer">
+    <a href="index.php" class="logofooter">PC Gaming 
+        <span>|</span> 
+        <br> 
+        <p> PCGAMING.COM</p> 
+    </a>
+    <div class="sanpham">
+        <!-- <ul class="menu-footer">
+            <h2>Sản Phẩm</h2>
+                <li><a href="#Acer">Acer</a></li>
+                <li><a href="#Macbook">Macbook</a></li>
+                <li><a href="#Asus">Asus</a></li>
+                <li><a href="#MSI">MSI</a></li>
+        </ul> -->
+    </div>
+    <div class="contact">
+        <h2>Contact</h2>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-flip" style="color: #0008ff;"></i></a>
+        <br>
+        <a href="https://www.google.com/"><i class="fa-brands fa-twitter fa-bounce" style="color: #005eff;"></i></a>
+        <br>
+        <a href="https://www.google.com/"><i class="fa-brands fa-instagram" style="color: #e1bbec;"></i></a>
+        
+    </div>
+    <div class="lienhe">
+        <h2>Liên Hệ</h2>
+        <p><span>Phone:</span> 34597348573498 </p>
+        <p><span >Mail:</span> hellotoila@gmail.com</p>
+    </div>
+</footer>
+</body>
+</html>
