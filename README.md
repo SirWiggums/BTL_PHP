@@ -6,12 +6,18 @@ BTL_PHP là một dự án website bán máy tính chuyên nghiệp, mang lại 
 🌐 **Tính năng**  
 - 🖥️ Tìm kiếm và hiển thị sản phẩm.  
 - 🛒 Giỏ hàng tiện lợi.  
-- 💳 Thanh toán an toàn.  
+- 💻 Đăng ký đăng nhập dễ dàng.  
 
-🔧 **Công nghệ sử dụng**  
-- PHP  
-- MySQL  
-- Bootstrap  
+🔧 **Ngôn ngữ sử dụng**  
+- PHP
+- HTML
+- CSS  
+- MySQL
+- JS
+  
+💿 **Công nghệ sử dụng**
+- Visual Studio Code
+- Xampp
 
 📦 **Cách cài đặt**  
 1. Tải mã nguồn từ GitHub.  
