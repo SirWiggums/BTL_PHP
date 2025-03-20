@@ -19,4 +19,4 @@ BTL_PHP là một dự án website bán máy tính chuyên nghiệp, mang lại 
 3. Chạy website qua localhost.
 
 🎉 **Demo**
-[Link demo](#) hoặc thêm ảnh minh họa tại đây.
+[Link demo](#http://nhomhaibanpc.infinityfreeapp.com/) hoặc thêm ảnh minh họa tại đây.
