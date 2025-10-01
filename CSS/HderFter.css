@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+/* header {
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+} */
+
+header {
+    height: 65px;
+    position: fixed;
+    top: 80px; /* ban đầu cách trên */
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    /* border-radius: 20px; */
+    transition: top 0.3s ease; /* thêm hiệu ứng trượt */
+}
+
+header.scrolled {
+    top: 0;            /* dính sát trên */
+    border-radius: 0;  /* nếu muốn bo tròn mất đi khi dính */
+}
+
+header .logo {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: rgb(0, 0, 0);
+}
+
+header .logo p {
+    font-size: 10px;
+    margin-top: 5px;
+    float: right;
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 250px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between; /* Cách đều các phần tử */
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer .logofooter {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0 100px;
+}
+
+.footer .logofooter span {
+    color: rgb(0, 0, 0);
+}
+
+.footer .logofooter p {
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    padding: 0 140px;
+}
+
+.footer .sanpham {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .contact {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .lienhe {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seach {
+    height: 30px;
+    width: 300px;
+    background-color: white;
+    margin-left: 0px;
+    border-radius: 5px;
+}
+
+.seach input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.down {
+    display: flex;
+}
+
+.down button {
+    padding: 5px 5px;
+    border-radius: 10%;
+    height: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*  */
+.navigation {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navigation li {
+    margin-right: 20px;
+}
+
+.navigation li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation li a:hover {
+    text-decoration: underline;
+}
+/*  */
+
+h1 {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.intro-container {
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 65px; /* Đảm bảo nội dung không bị che bởi header */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .seach {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .footer .logofooter {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .seach input {
+        height: 25px;
+    }
+
+    .down button {
+        height: 30px;
+    }
+
+    .footer {
+        padding: 5px;
+    }
+
+    .footer .logofooter {
+        font-size: 1.5em;
+    }
+}

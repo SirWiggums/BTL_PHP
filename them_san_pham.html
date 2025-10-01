@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="CSS/ThemSP.css"> -->
+    <link rel="stylesheet" href="CSS/HderFter.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        form {
+
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="file"],
+        form textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .banner {
+        position: relative;
+            width: 100%;
+            height: 100px;
+            /* overflow: hidden; */
+        }
+        .banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('Anh/Anh2/33.webp') center/cover no-repeat;
+            filter: blur(10px); /* làm mờ */
+            transform: scale(1.1); /* phóng to để che hết */
+            z-index: 0;
+        }
+
+        /* ảnh chính */
+        /* #banner-image {
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+            height: 100%;       
+            object-fit: contain; 
+        } */
+        #banner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;     /* ảnh nằm trọn trong khung */
+            object-position: center; /* căn giữa ảnh */
+            position: relative;
+        }
+        
+        .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+                cursor: pointer;
+                background: rgba(0,0,0,0.4);
+                color: #fff;
+                border: none;
+                padding: 10px;
+                border-radius: 50%;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+    </style>
+
+    
+    <title>Thêm sản phẩm</title>
+</head>
+
+
+<body>
+    <section class="banner" id="banner">
+        <img src="Anh/Anh2/33.webp" alt="banner" id="banner-image">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+    <header id="header">
+        <img src="Anh/Anh2/pcgaming.png" alt="" width="100px" height="130px">
+        <a href="index.php" class="logo">PC Gaming
+            <span>|</span> 
+            <br>
+            <p> PCGAMING.COM</p>
+        </a>
+
+        <ul class="navigation">
+            <li><a href="index.php">Trang chủ</a></li>
+        </ul>
+        
+        <div class="giohang">
+            <!-- sua href gio hang -->
+           <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br><br>
+
+    <h2>Thêm sản phẩm</h2>
+    <form action="them_san_pham.php" method="post" enctype="multipart/form-data">
+        <label for="ten_san_pham">Tên sản phẩm:</label>
+        <input type="text" id="ten_san_pham" name="ten_san_pham" required><br>
+        <label for="hang_sp">Hãng sản phẩm:</label>
+        <input type="text" id="hang_sp" name="hang_sp" required><br>
+        <label for="gia_san_pham">Giá sản phẩm:</label>
+        <input type="text" id="gia_san_pham" name="gia_san_pham" required><br>
+        <label for="gia_cu">Giá cũ:</label>
+        <input type="text" id="gia_cu" name="gia_cu"><br>
+        <label for="mo_ta_ngan">Mô tả ngắn:</label>
+        <textarea id="mo_ta_ngan" name="mo_ta_ngan"></textarea><br>
+        <label for="mo_ta_chi_tiet">Mô tả chi tiết:</label>
+        <textarea id="mo_ta_chi_tiet" name="mo_ta_chi_tiet"></textarea><br>
+        <label for="so_luong">Số lượng:</label>
+        <input type="number" id="so_luong" name="so_luong" required><br>
+        <label for="image">Hình ảnh:</label>
+        <input type="file" id="image" name="image" required><br>
+        <input type="submit" value="Thêm sản phẩm">
+    </form>
+<!--------------------------------------------------------------------------------Footer-------------------------------------------------------------------------------->
+<footer class="footer" id="footer">
+    <a href="index.php" class="logofooter">PC Gaming 
+        <span>|</span> 
+        <br> 
+        <p> PCGAMING.COM</p> 
+    </a>
+    <div class="sanpham">
+
+    </div>
+    <div class="contact">
+        <h2>Contact</h2>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-flip" style="color: #0008ff;"></i></a>
+        <br>
+        <a href="https://www.google.com/"><i class="fa-brands fa-twitter fa-bounce" style="color: #005eff;"></i></a>
+        <br>
+        <a href="https://www.google.com/"><i class="fa-brands fa-instagram" style="color: #e1bbec;"></i></a>
+        
+    </div>
+    <div class="lienhe">
+        <h2>Liên Hệ</h2>
+        <p><span>Phone:</span> 34597348573498 </p>
+        <p><span >Mail:</span> hellotoila@gmail.com</p>
+    </div>
+</footer>
+
+    <script>
+        let slideIndex = 0;
+        const images = ["Anh/Anh2/11.jpg", "Anh/Anh2/22.webp", "Anh/Anh2/33.webp"];
+
+        function showSlide(index) {
+            const bannerImage = document.getElementById("banner-image");
+            slideIndex = (index + images.length) % images.length; // Đảm bảo chỉ số nằm trong khoảng hợp lệ
+            bannerImage.src = images[slideIndex];
+        }
+
+        function changeSlide(n) {
+            showSlide(slideIndex + n);
+        }
+
+        function autoSlide() {
+            changeSlide(1);
+            setTimeout(autoSlide, 3000); // Thay đổi hình ảnh sau mỗi 5 giây
+        }
+
+        window.onload = function() {
+            showSlide(slideIndex);
+            setTimeout(autoSlide, 3000); // Bắt đầu tự động thay đổi hình ảnh
+        };
+
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+</html>
